@@ -1,0 +1,48 @@
+.row-header{
+    margin:0px auto;
+    padding:0px auto;
+}
+
+.row-content {
+    margin:0px auto;
+    padding: 0px 0px 0px 0px;
+    border-bottom: 1px ridge;
+    min-height:400px;
+}
+
+.footer{
+    background-color: #4ab358;
+    margin:0px auto;
+    padding: 20px 0px 20px 0px;
+}
+.jumbotron {
+    padding:70px 30px 70px 30px;
+    margin:0px auto;
+    background: #1c7a14 ;
+    color:floralwhite;
+}
+
+address{
+    font-size:80%;
+    margin:0px;
+    color:#0f0f0f;
+}
+
+.navbar-dark {
+    background-color: #0c2c0a;
+}
+
+.row{
+    margin:5px
+}
+.container{
+    margin: 0px auto;
+}
+@media only screen and (max-width: 700px) {
+    .sm-hide{
+        display: none;
+    }
+    .sm-show{
+        width:100%;
+    }
+}

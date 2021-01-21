@@ -1,0 +1,4 @@
+
+export const DISEASE_LOADING = 'DISEASE_LOADING';
+export const DISEASE_FAILED = 'DISEASE_FAILED';
+export const ADD_DISEASE = 'ADD_DISEASE';
