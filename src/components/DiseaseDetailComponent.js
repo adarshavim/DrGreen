@@ -12,21 +12,21 @@ function RenderDisease({ disease }) {
       <div className="container">
     <div className="row">
         <div className="col-12 col-md-4">
-            <img src={disease.img[0]} alt={disease.name} width="100%" height="200px"/>
+            <img src={disease.img[0]} alt={disease.diseaseName} width="100%" height="200px"/>
         </div>
         <div className="col-12 col-md-4">
-            <img src={disease.img[1]} alt={disease.name} width="100%" height="200px"/>
+            <img src={disease.img[1]} alt={disease.diseaseName} width="100%" height="200px"/>
         </div>
         <div className="col-12 col-md-4">
-            <img src={disease.img[2]} alt={disease.name} width="100%" height="200px"/>
+            <img src={disease.img[2]} alt={disease.diseaseName} width="100%" height="200px"/>
         </div>
     </div>
     <div className="row">
         <div className="col-12 col-md-4">
-            <img src={disease.img[3]} alt={disease.name} width="100%" height="200px"/>
+            <img src={disease.img[3]} alt={disease.diseaseName} width="100%" height="200px"/>
         </div>
         <div className="col-12 col-md-4">
-            <img src={disease.img[4]} alt={disease.name} width="100%" height="200px"/>
+            <img src={disease.img[4]} alt={disease.diseaseName} width="100%" height="200px"/>
         </div>
     </div>
     <div className="row">
@@ -49,7 +49,7 @@ function RenderDisease({ disease }) {
             </li>
         </ul>
     </div>
-    <div className="row">
+    {/* <div className="row">
       <h3>Solution</h3><br/>
       <ul type="list-unstyled">
           <li>
@@ -59,22 +59,22 @@ function RenderDisease({ disease }) {
             {disease.solutions[1]}
             </li>
         </ul>
-    </div>
+    </div> */}
     <div className="row">
     <h3>Buy Links</h3><br/>
     <ul type="list-unstyled">
           <li>
-          {disease.buy[0]}
+          {disease.buyAt[0]}
           </li>
           <li>
-            {disease.buy[1]}
+            {disease.buyAt[1]}
             </li>
         </ul>
     </div>
     <div className="row">
     <h3>Readmore At</h3><br/>
         <p>
-            {disease.readmore}
+            {disease.readMore}
         </p>
     </div>
     </div>

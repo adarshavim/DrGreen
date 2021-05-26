@@ -4,15 +4,15 @@ import { Loading } from './LoadingComponent';
 import {Link} from 'react-router-dom';
     function RenderListItem ({disease}) {
         return (
-            <Media tag="li" key={disease.id} className="col-12 mt-5" >
-            <Link to={`/home/${disease.id}`}>
+            <Media tag="li" key={disease._id} className="col-12 mt-5" >
+            <Link to={`/home/${disease._id}`}>
             <Media body className="ml-5 pl-2 block-example border border-success p-1">
-                <Media heading className="block-example border border-success p-1" >{disease.name}</Media>
-                <img className="rounded mb-0 sm-show" src={disease.img[1]} width="20%" height="250px" alt={disease.name} padding="2px"/>
-                <img className="rounded mb-0 sm-hide m-show" src={disease.img[0]} width="20%" height="250px" alt={disease.name}/>
-                <img className="rounded mb-0 sm-hide" src={disease.img[2]} width="20%" height="250px" alt={disease.name}/>
-                <img className="rounded mb-0 sm-hide" src={disease.img[3]} width="20%" height="250px" alt={disease.name}/>
-                <img className="rounded mb-0 sm-hide" src={disease.img[4]} width="20%" height="250px" alt={disease.name}/>
+                <Media heading className="block-example border border-success p-1" >{disease.diseaseName}</Media>
+                <img className="rounded mb-0 sm-show" src={disease.img[1]} width="20%" height="250px" alt={disease.diseaseName} padding="2px"/>
+                <img className="rounded mb-0 sm-hide m-show" src={disease.img[0]} width="20%" height="250px" alt={disease.diseaseName}/>
+                <img className="rounded mb-0 sm-hide" src={disease.img[2]} width="20%" height="250px" alt={disease.diseaseName}/>
+                <img className="rounded mb-0 sm-hide" src={disease.img[3]} width="20%" height="250px" alt={disease.diseaseName}/>
+                <img className="rounded mb-0 sm-hide" src={disease.img[4]} width="20%" height="250px" alt={disease.diseaseName}/>
             </Media>
             </Link>
         </Media>
@@ -23,7 +23,7 @@ import {Link} from 'react-router-dom';
 
     const listofdiseases = props.diseases.diseases.map((disease) => {
             return (
-                <div className="row"  key={disease.id}>
+                <div className="row"  key={disease._id}>
                     <RenderListItem disease={disease} />
                 </div>
             );

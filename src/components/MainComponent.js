@@ -39,7 +39,7 @@ class Main extends Component {
     
     const DiseaseWithId = ({match}) => {
       return(
-        <DiseaseDetail  disease={this.props.diseases.diseases.filter((disease) => disease.id === parseInt(match.params.diseaseId,10))[0]}
+        <DiseaseDetail  disease={this.props.diseases.diseases.filter((disease) => disease._id === match.params.diseaseId)[0]}
         isLoading={this.props.diseases.isLoading}
         errMess={this.props.diseases.errMess}
       />
@@ -53,7 +53,10 @@ class Main extends Component {
       <Route path='/home/:diseaseId' component={DiseaseWithId} /> 
       <Redirect to="/home" />
       </Switch>
-      <Footer />
+      <Footer diseases={this.props.diseases}/>
+        {/* {this.props.diseases.diseases.map(disease=>{
+          return(<div>{disease._id}</div>);
+        })} */}
       </div>
     );
   }
