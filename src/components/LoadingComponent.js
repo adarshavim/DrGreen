@@ -1,10 +1,12 @@
 import React from 'react';
+import { Heart } from 'react-spinners-css';
 
 export const Loading = () => {
     return(
-        <div className="col-12">
-            <span className="fa fa-spinner fa-pulse fa-3x fa-fw text-primary"></span>
-            <p>Loading . . .</p>
-        </div>
+        <section>
+            <div className="spinner">
+            <Heart color="#be97e8" size={200} />
+            </div>
+        </section>
     );
 };
