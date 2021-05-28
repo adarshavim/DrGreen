@@ -7,10 +7,6 @@ import {
   Nav,
   NavItem,
   NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
   NavbarText
 } from 'reactstrap';
 
@@ -20,37 +16,20 @@ const Header = (props) => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <div>
-      <Navbar color="light" light expand="md" fixed="top">
-        <NavbarBrand href="/">reactstrap</NavbarBrand>
+    <div style={{backgroundColor:"#00F260"}}>
+      <Navbar color="light" light expand="md" fixed="top" style={{opacity:"0.7"}}>
+        <NavbarBrand href="/home">Home</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink href="/components/">Components</NavLink>
+              <NavLink href="/About"><b style={{color:"black"}}>About Us</b></NavLink>
             </NavItem>
-            <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+            <NavItem >
+              <NavLink href="https://github.com/adarshavim/DrGreen.git"><b style={{color:"black"}}>GitHub</b></NavLink>
             </NavItem>
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
-                Options
-              </DropdownToggle>
-              <DropdownMenu right>
-                <DropdownItem>
-                  Option 1
-                </DropdownItem>
-                <DropdownItem>
-                  Option 2
-                </DropdownItem>
-                <DropdownItem divider />
-                <DropdownItem>
-                  Reset
-                </DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
           </Nav>
-          <NavbarText>Simple Text</NavbarText>
+          <NavbarText ><b style={{color:"black"}}>Go Green, Go High</b></NavbarText>
         </Collapse>
       </Navbar>
     </div>

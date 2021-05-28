@@ -4,7 +4,7 @@ import AboutImage from '../images/about-image.jpg';
 const About=(props)=>{
     return (
          <>
-         <section id="about" data-stellar-background-ratio="0.5">
+         <section id="about" data-stellar-background-ratio="0.5" style={{marginBottom:"5%",backgroundColor:"#2db300"}}>
         <div className="container">
         <div className="row">
 
@@ -51,7 +51,7 @@ const About=(props)=>{
 
              <div className="col-md-4 col-sm-12">
                          <div className="about-image">
-                              <img id="about-img" src={AboutImage} class="img-responsive"  alt=""/>
+                              <img id="about-img" src={AboutImage} className="img-responsive"  alt=""/>
                          </div>
                </div>
              

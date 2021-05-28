@@ -6,13 +6,13 @@ import About from './AboutComponent';
     
    function RenderPlant({plant}){
     return (
-        <div style={{margin:"50px",border:"2px solid white"}}>
+        <div className="media-container">
         <Link to={`/home/${plant._id}`}>
-        <Media tag="li" style={{padding:"2%"}}>
+        <Media tag="li">
             <Media left  middle>
-                <Media object src={plant.img[0]} alt={plant.plant}  className="ver-center"/>
+                <Media object src={plant.img[0]} alt={plant.plant}  className="ver-center sm-hide"/>
             </Media>
-            <Media body className="ml-5">
+            <Media body >
                 <Media heading>{plant.plant}</Media>
                 <p>{plant.desc}</p>
             </Media>
@@ -62,19 +62,17 @@ import About from './AboutComponent';
   
                       <div className="col-md-6 col-sm-12">
                            <div className="home-info">
-                                <h1>We make beautiful websites for all people.</h1>
-                                <a href="#about" className="btn section-btn smoothScroll">Start a project</a>
-                                <span>
-                                     CALL US (+66) 010-020-0340
-                                     <small>For any inquiry</small>
-                                </span>
+                                <h1 style={{color:"whitesmoke"}}>Don't worry,<br/>Dr. Green is here to help you</h1>
                            </div>
                       </div>
   
                       <div className="col-md-6 col-sm-12">
                            <div className="home-video">
                                 <div className="embed-responsive embed-responsive-16by9">
-                                     <iframe src="https://www.youtube.com/embed/AqcjdkPMPJA"  title="DemoVedio"></iframe>
+                                    <video width="320" height="240" controls>
+                                        <source src="https://firebasestorage.googleapis.com/v0/b/plant-disease-detection-35389.appspot.com/o/VID-20210528-WA0000.mp4?alt=media&token=57adfa08-feca-447b-b347-225de03670c6" type="video/mp4"/>
+                                        Your browser does not support the video tag.
+                                        </video>
                                 </div>
                            </div>
                       </div>
@@ -88,7 +86,7 @@ import About from './AboutComponent';
             <div className="row">
             <div className="col-md-12 col-sm-12">
                          <div className="section-title">
-                              <h2>Our Services</h2>
+                              <h2>Plant Directory</h2>
                               <span className="line-bar">...</span>
                          </div>
             </div>

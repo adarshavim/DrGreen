@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import DiseaseDetail from './DiseaseDetailComponent';
+import PlantDetail from './PlantComponent';
 import Home from './HomeComponent';
 import Header from './HeaderComponent';
 import Footer from './FooterComponent';
@@ -40,11 +40,12 @@ class Main extends Component {
       return(<About/>);
     }
     
-    const DiseaseWithId = ({match}) => {
+    const Plant= ({match}) => {
       return(
-        <DiseaseDetail  disease={this.props.diseases.diseases.filter((disease) => disease._id === match.params.diseaseId)[0]}
+        <PlantDetail  plant={this.props.diseases.diseases.filter((disease) => disease._id === match.params.plantId)[0]}
         isLoading={this.props.diseases.isLoading}
         errMess={this.props.diseases.errMess}
+        diseases={this.props.diseases}
       />
       );
     };
@@ -54,10 +55,10 @@ class Main extends Component {
       <Switch>
       <Route exact path="/home" component={HomePage} />
       <Route exact path="/About" component={AboutPage}/>
-      <Route path='/home/:diseaseId' component={DiseaseWithId} /> 
+      <Route path='/home/:plantId' component={Plant} />
       <Redirect to="/home" />
       </Switch>
-      <Footer diseases={this.props.diseases}/>
+      <Footer />
         {/* {this.props.diseases.diseases.map(disease=>{
           return(<div>{disease._id}</div>);
         })} */}
