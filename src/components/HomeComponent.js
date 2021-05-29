@@ -3,18 +3,18 @@ import { Media} from 'reactstrap';
 import { Loading } from './LoadingComponent';
 import {Link} from 'react-router-dom';
 import About from './AboutComponent';
-    
+import Footer from './FooterComponent';
    function RenderPlant({plant}){
     return (
-        <div className="media-container">
+        <div className="row plant-content">
         <Link to={`/home/${plant._id}`}>
-        <Media tag="li">
-            <Media left  middle>
-                <Media object src={plant.img[0]} alt={plant.plant}  className="ver-center sm-hide"/>
+        <Media tag="li" className="row">
+            <Media left  middle className="col-md-3 col-sm-12" style={{margin:"2%"}}>
+                <Media object src={plant.img[0]} alt={plant.plant} className="card-img"/>
             </Media>
-            <Media body >
-                <Media heading>{plant.plant}</Media>
-                <p>{plant.desc}</p>
+            <Media body className="col-sm-12">
+                <Media><h3>{plant.plant}</h3></Media>
+                <p className="sm-hide">{plant.desc}</p>
             </Media>
         </Media>
         </Link>
@@ -44,8 +44,8 @@ import About from './AboutComponent';
         else if (props.diseases.errMess) {
             return(
                
-                    <div className="row"> 
-                        <div className="col-12">
+                    <div> 
+                        <div>
                             <h4>{props.diseases.errMess}</h4>
                         </div>
                     </div>
@@ -53,48 +53,46 @@ import About from './AboutComponent';
             );
         }
         else{
-        return (
-        <>
-            <section id="home" data-stellar-background-ratio="0.5">
-            <div className="overlay"></div>
-            <div className="container">
-                 <div className="row">
-  
-                      <div className="col-md-6 col-sm-12">
-                           <div className="home-info">
-                                <h1 style={{color:"whitesmoke"}}>Don't worry,<br/>Dr. Green is here to help you</h1>
-                           </div>
-                      </div>
-  
-                      <div className="col-md-6 col-sm-12">
-                           <div className="home-video">
-                                <div className="embed-responsive embed-responsive-16by9">
-                                    <video width="320" height="240" controls>
+        return (<>
+            <div id="home">
+                <div className="overlay"></div>
+                <div className="container">
+                    <div className="row">
+                         <div className="col-md-6 col-sm-12 home-info">
+                                <div>
+                                        <h1>Don't worry,<br/>Dr. Green is here to help you</h1>
+                                </div>
+                         </div>
+                         <div className="col-md-1 col-sm-0"></div>
+                         <div className="col-md-5 col-sm-12">
+                                    <video controls>
                                         <source src="https://firebasestorage.googleapis.com/v0/b/plant-disease-detection-35389.appspot.com/o/VID-20210528-WA0000.mp4?alt=media&token=57adfa08-feca-447b-b347-225de03670c6" type="video/mp4"/>
                                         Your browser does not support the video tag.
-                                        </video>
-                                </div>
-                           </div>
-                      </div>
-                      
-                 </div>
+                                    </video>
+                        </div>
+                    </div>
+                </div>
             </div>
-         </section>
-        <About/>
-        <section id="blog" data-stellar-background-ratio="0.5">
-          <div className="container">
+         
+         <div>
+             <About/>
+         </div>
+        <div id="plant-directory">
+            <div className="row row-content" style={{margin:"0",paddingBottom:"0"}}>
+                <h1>Plant Directory</h1>
+            </div>
+            <div className="row row-content" style={{margin:"0",}}>
+                <span className="plant-bar">...</span>
+            </div> 
             <div className="row">
-            <div className="col-md-12 col-sm-12">
-                         <div className="section-title">
-                              <h2>Plant Directory</h2>
-                              <span className="line-bar">...</span>
-                         </div>
+                <div className="col-md-2 col-sm-0"></div>
+                <div className="col-md-8 col-sm-12">
+                {listOfPlants}
+                </div>
             </div>
-            {listOfPlants}
-            </div>
-          </div>
-        </section>
-        
+                
+        </div>
+        <Footer />
        </> );
         }
     }

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PlantDetail from './PlantComponent';
 import Home from './HomeComponent';
 import Header from './HeaderComponent';
-import Footer from './FooterComponent';
+
 import About from './AboutComponent';
 import {Switch,Route,Redirect,withRouter} from 'react-router-dom';
 import {connect} from 'react-redux';
@@ -50,18 +50,15 @@ class Main extends Component {
       );
     };
     return (
-      <div>
-       <Header />
+      <div className="body">
+        <Header />
+       
       <Switch>
       <Route exact path="/home" component={HomePage} />
       <Route exact path="/About" component={AboutPage}/>
       <Route path='/home/:plantId' component={Plant} />
       <Redirect to="/home" />
       </Switch>
-      <Footer />
-        {/* {this.props.diseases.diseases.map(disease=>{
-          return(<div>{disease._id}</div>);
-        })} */}
       </div>
     );
   }

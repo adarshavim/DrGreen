@@ -16,7 +16,7 @@ const Header = (props) => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <div style={{backgroundColor:"#00F260"}}>
+    <>
       <Navbar color="light" light expand="md" fixed="top" style={{opacity:"0.7"}}>
         <NavbarBrand href="/home">Home</NavbarBrand>
         <NavbarToggler onClick={toggle} />
@@ -32,7 +32,7 @@ const Header = (props) => {
           <NavbarText ><b style={{color:"black"}}>Go Green, Go High</b></NavbarText>
         </Collapse>
       </Navbar>
-    </div>
+    </>
   );
 }
 
