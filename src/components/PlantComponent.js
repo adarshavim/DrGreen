@@ -137,7 +137,7 @@ function RenderPlant({ plants,diseases }) {
       </div>
     </div>
     <div className="row">
-        <h2 style={{margin:"1%",display:"flex",justifyContent:"center"}}>Disease in this {plants.plant}</h2>
+        <h2 style={{margin:"1%",display:"flex",justifyContent:"center"}}>Diseases in {plants.plant}</h2>
             {diseases.map(disease=>{
               if(disease.plant===plants.plant&&disease.diseaseName!==plants.diseaseName){
                 return (<><RenderDiseaseCard dis={disease}/></>)
