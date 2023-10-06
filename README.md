@@ -1,3 +1,10 @@
+# Screenshots
+![](public/Screenshot from 2023-10-06 15-32-42.png)
+![](public/Screenshot from 2023-10-06 15-32-42.png)
+![](public/Screenshot from 2023-10-06 15-32-42.png)
+![](public/Screenshot from 2023-10-06 15-32-42.png)
+![](public/Screenshot from 2023-10-06 15-32-42.png)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
